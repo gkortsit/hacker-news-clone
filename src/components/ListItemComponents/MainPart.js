@@ -1,16 +1,19 @@
 import React from "react";
+import "./MainPart.css";
 
-const MainPart = () => {
+const MainPart = ({ id, title, url }) => {
   return (
-    <table>
-      <tr>
-        <td>1</td>
-        <td>Upvote Icon</td>
-        <td>
-          911 emergency services go down across the US after CenturyLink outage
-        </td>
-        <td>(techcrunch.com)</td>
-      </tr>
+    <table className="main-table">
+      <tbody>
+        <tr>
+          <td className="greyed-items">{id}.</td>
+          <td className="greyed-items">
+            <i className="fas fa-arrow-up" />
+          </td>
+          <td className="item-title">{title}</td>
+          <td className="greyed-items">{url}</td>
+        </tr>
+      </tbody>
     </table>
   );
 };

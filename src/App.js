@@ -2,17 +2,15 @@ import React from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 
-const App = () => {
-  return (
-    <div>
-      <table>
+class App extends React.Component {
+  render() {
+    return (
+      <div>
         <Header />
-      </table>
-      <table>
         <Main />
-      </table>
-    </div>
-  );
-};
+      </div>
+    );
+  }
+}
 
 export default App;

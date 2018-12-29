@@ -1,0 +1,9 @@
+.sp-main {
+  font-size: 10px;
+  color: grey;
+  margin-left: 32px;
+}
+
+.divider-sec {
+  border-right: 1px solid grey !important;
+}

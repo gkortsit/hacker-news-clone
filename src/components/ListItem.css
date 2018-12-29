@@ -1,0 +1,11 @@
+.item-body {
+  background: #f4f4f4;
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 10px;
+}
+
+#root {
+  width: 75%;
+  margin: auto;
+}
