@@ -1,20 +1,19 @@
 import React from "react";
 import "./SecondaryPart.css";
-import Time from "./Time";
 
-const SecondaryPart = ({ score, author, time, comments }) => {
+const SecondaryPart = ({ points, user, time_ago, comments_count }) => {
   return (
     <table className="sp-main">
       <tbody>
         <tr>
           <td>
-            {score} points by {author}
+            {points} points by {user}
           </td>
           <td className="divider-sec">
-            <Time time={time} />
+            <span>{time_ago}</span>
           </td>
           <td className="divider-sec">hide</td>
-          <td>{comments} comments</td>
+          <td>{comments_count} comments</td>
         </tr>
       </tbody>
     </table>
