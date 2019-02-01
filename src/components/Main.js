@@ -1,6 +1,7 @@
 import React from "react";
 import ListItem from "./ListItem";
 import axios from "axios";
+import "./Main.css";
 
 class Main extends React.Component {
   state = {
@@ -17,7 +18,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="main-contaner">
         {this.state.feedItems.map(feedItem => {
           console.log(feedItem);
           return <ListItem id={feedItem.id} data={feedItem} />;

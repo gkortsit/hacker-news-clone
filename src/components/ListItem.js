@@ -6,7 +6,6 @@ import "./ListItem.css";
 const ListItem = ({ data }) => {
   const { title, url } = data;
   const { points, user, time_ago, comments_count } = data;
-  console.log(time_ago);
   return (
     <table className="item-body">
       <tbody>

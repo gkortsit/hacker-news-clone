@@ -1,9 +1,48 @@
-.header-body {
+.navbar-container {
+  width: 100vw;
+  background-color: orangered;
+}
+
+.navbar {
+  font-size: 0.9rem;
+  width: 100vw;
+}
+
+.nav {
+  display: inline-block;
+  padding: 5px;
+}
+
+.nav-button {
+  float: right;
+}
+
+.nav-logo {
+  display: inline-block;
+  position: relative;
+  top: 0.5vh;
+  left: 1%;
+  font-size: 1.5rem;
+}
+
+.fab {
+  color: orangered;
+  background-color: white;
+}
+
+.nav-brand {
+  display: inline-block;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/* .header-body {
   background-color: orangered;
   border-collapse: collapse;
   border-spacing: 10px;
-  width: 100%;
+  width: 100vw;
   font-size: 14px;
+  overflow: hidden;
 }
 
 .header-body tr {
@@ -13,6 +52,11 @@
 
 .header-body td {
   padding: 0 5px;
+}
+
+.header-links {
+  margin-top: 2px;
+  font-size: 0.8rem;
 }
 
 .fab {
@@ -32,4 +76,4 @@
 
 .divider {
   border-right: 1px solid black;
-}
+} */
