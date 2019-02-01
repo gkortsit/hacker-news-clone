@@ -1,6 +1,9 @@
 .item-body {
   background: #f4f4f4;
-  width: 100%;
-  border-collapse: collapse;
-  line-height: 10px;
+  width: 100vw;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
 }

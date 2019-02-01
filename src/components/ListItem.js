@@ -7,25 +7,23 @@ const ListItem = ({ data }) => {
   const { title, url } = data;
   const { points, user, time_ago, comments_count } = data;
   return (
-    <table className="item-body">
-      <tbody>
-        <tr className="main-part">
-          <td>
-            <MainPart title={title} url={url} />
-          </td>
-        </tr>
-        <tr className="secondary-part">
-          <td>
-            <SecondaryPart
-              comments_count={comments_count}
-              points={points}
-              user={user}
-              time_ago={time_ago}
-            />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="item-container">
+      <div className="item-body">
+        <div className="main-part">
+          <MainPart title={title} url={url} />
+        </div>
+      </div>
+      <div className="secondary-part">
+        <div>
+          <SecondaryPart
+            comments_count={comments_count}
+            points={points}
+            user={user}
+            time_ago={time_ago}
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -8,7 +8,7 @@ const MainPart = ({ id, title, url }) => {
         <tr>
           <td className="greyed-items">{id}.</td>
           <td className="greyed-items">
-            <i className="fas fa-arrow-up" />
+            <i class="fas fa-caret-up" />
           </td>
           <td className="item-title">{title}</td>
           <td className="greyed-items">{url}</td>

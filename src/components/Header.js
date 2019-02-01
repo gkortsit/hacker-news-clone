@@ -7,7 +7,7 @@ const Header = () => {
       <div className="nav-logo">
         <i className="fab fa-hacker-news" />
       </div>
-      <div className="nav nav-brand">Hacker News</div>
+      <div className="nav-brand">Hacker News</div>
       <div className="navbar">
         <div className="nav nav-item">new</div>
         <div className="nav nav-item">comments</div>
