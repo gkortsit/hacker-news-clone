@@ -12,7 +12,7 @@ const defaultItemsReducer = (state = [], action) => {
 const newItemsReducer = (state = [], action) => {
   switch (action.type) {
     case "FETCH_NEW":
-      return [...state, action.payload];
+      return [...state, ...action.payload];
     default:
       return state;
   }

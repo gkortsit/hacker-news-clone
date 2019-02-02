@@ -11,6 +11,8 @@
 .nav {
   display: inline-block;
   padding: 5px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-button {
@@ -34,6 +36,8 @@
   display: inline-block;
   margin-left: 8px;
   font-weight: bold;
+  text-decoration: none;
+  color: inherit;
 }
 
 @media only screen and (min-width: 767px) {
@@ -56,5 +60,10 @@
   .navbar-container {
     width: 60vw;
     margin: 1% auto;
+  }
+
+  .nav-brand {
+    margin-left: 15px;
+    margin-right: 5px;
   }
 }
