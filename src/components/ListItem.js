@@ -4,13 +4,13 @@ import SecondaryPart from "./ListItemComponents/SecondaryPart";
 import "./ListItem.css";
 
 const ListItem = ({ data }) => {
-  const { title, url } = data;
+  const { title, domain } = data;
   const { points, user, time_ago, comments_count } = data;
   return (
     <div className="item-container">
       <div className="item-body">
         <div className="main-part">
-          <MainPart title={title} url={url} />
+          <MainPart title={title} domain={domain} />
         </div>
       </div>
       <div className="secondary-part">

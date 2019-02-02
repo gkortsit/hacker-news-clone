@@ -1,11 +1,11 @@
 .navbar-container {
-  width: 100vw;
+  width: 100%;
   background-color: orangered;
 }
 
 .navbar {
   font-size: 0.9rem;
-  width: 100vw;
+  width: 100%;
 }
 
 .nav {
@@ -14,7 +14,7 @@
 }
 
 .nav-button {
-  float: right;
+  transform: translateX(5%);
 }
 
 .nav-logo {

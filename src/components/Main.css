@@ -1,12 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
 }
 
 .main-contaner {
-  width: 100vw;
-  /* overflow: hidden; */
+  width: 100%;
+}
+
+@media only screen and (min-width: 767px) {
+  .main-contaner {
+    width: 80vw;
+    margin: auto 5%;
+  }
 }

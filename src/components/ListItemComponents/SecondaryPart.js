@@ -3,20 +3,13 @@ import "./SecondaryPart.css";
 
 const SecondaryPart = ({ points, user, time_ago, comments_count }) => {
   return (
-    <table className="sp-main">
-      <tbody>
-        <tr>
-          <td>
-            {points} points by {user}
-          </td>
-          <td className="divider-sec">
-            <span>{time_ago}</span>
-          </td>
-          <td className="divider-sec">hide</td>
-          <td>{comments_count} comments</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="sp-main">
+      <div className="points">
+        {points} points by {user}
+      </div>
+      <div className="sec-item mid-item">{time_ago}</div>
+      <div className="sec-item">{comments_count} comments</div>
+    </div>
   );
 };
 

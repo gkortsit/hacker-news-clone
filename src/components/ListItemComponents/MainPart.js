@@ -1,20 +1,18 @@
 import React from "react";
 import "./MainPart.css";
 
-const MainPart = ({ id, title, url }) => {
+const MainPart = ({ title, domain }) => {
   return (
-    <table className="main-table">
-      <tbody>
-        <tr>
-          <td className="greyed-items">{id}.</td>
-          <td className="greyed-items">
-            <i class="fas fa-caret-up" />
-          </td>
-          <td className="item-title">{title}</td>
-          <td className="greyed-items">{url}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="main-part-container">
+      <div className="post">
+        <div className="greyed-items">
+          <i class="fas fa-caret-up" />
+        </div>
+        <div className="item-title">
+          {title} <span className="greyed-items">({domain})</span>
+        </div>
+      </div>
+    </div>
   );
 };
 
