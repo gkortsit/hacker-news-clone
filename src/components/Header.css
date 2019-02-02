@@ -14,7 +14,7 @@
 }
 
 .nav-button {
-  transform: translateX(5%);
+  float: right;
 }
 
 .nav-logo {
@@ -34,4 +34,27 @@
   display: inline-block;
   margin-left: 8px;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 767px) {
+  .navbar-container {
+    width: 80vw;
+    margin: 1% auto;
+  }
+
+  .navbar {
+    display: inline-block;
+    width: 79%;
+  }
+
+  .nav-button {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar-container {
+    width: 60vw;
+    margin: 1% auto;
+  }
 }

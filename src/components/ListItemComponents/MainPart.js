@@ -6,7 +6,7 @@ const MainPart = ({ title, domain }) => {
     <div className="main-part-container">
       <div className="post">
         <div className="greyed-items">
-          <i class="fas fa-caret-up" />
+          <i className="fas fa-caret-up" />
         </div>
         <div className="item-title">
           {title} <span className="greyed-items">({domain})</span>

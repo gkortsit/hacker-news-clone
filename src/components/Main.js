@@ -5,23 +5,30 @@ import "./Main.css";
 
 class Main extends React.Component {
   state = {
-    feedItems: []
+    defaultItems: [],
+    newItems: []
   };
 
   componentDidMount() {
     axios.get("https://api.hnpwa.com/v0/news/1.json").then(res => {
       this.setState({
-        feedItems: res.data
+        defaultItems: res.data
+      });
+    });
+
+    axios.get("https://api.hnpwa.com/v0/newest/1.json").then(res => {
+      this.setState({
+        newItems: res.data
       });
     });
   }
 
   render() {
     return (
-      <div class="main-contaner">
-        {this.state.feedItems.map(feedItem => {
-          console.log(feedItem);
-          return <ListItem id={feedItem.id} data={feedItem} />;
+      <div className="main-contaner">
+        {console.log(this.state.defaultItems)}
+        {this.state.defaultItems.map(feedItem => {
+          return <ListItem key={feedItem.id} data={feedItem} />;
         })}
       </div>
     );
