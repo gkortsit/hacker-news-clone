@@ -1,1 +1,3 @@
-Basic Hackernews clone made with static data using ReactJS.
+Hackernews clone app.
+
+(in progress)
