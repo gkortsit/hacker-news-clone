@@ -1,33 +1,19 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import ListItem from "./ListItem";
-import axios from "axios";
+import { fetchDefaultItems } from "../actions";
 import "./Main.css";
 
 class Main extends React.Component {
-  state = {
-    defaultItems: [],
-    newItems: []
-  };
-
   componentDidMount() {
-    axios.get("https://api.hnpwa.com/v0/news/1.json").then(res => {
-      this.setState({
-        defaultItems: res.data
-      });
-    });
-
-    axios.get("https://api.hnpwa.com/v0/newest/1.json").then(res => {
-      this.setState({
-        newItems: res.data
-      });
-    });
+    this.props.fetchDefaultItems();
   }
 
   render() {
     return (
       <div className="main-contaner">
-        {console.log(this.state.defaultItems)}
-        {this.state.defaultItems.map(feedItem => {
+        {this.props.defaultItems.map(feedItem => {
           return <ListItem key={feedItem.id} data={feedItem} />;
         })}
       </div>
@@ -35,4 +21,13 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+const mapStateToProps = state => {
+  return {
+    defaultItems: state.defaultItems
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { fetchDefaultItems }
+)(Main);
