@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./SecondaryPart.css";
 
 const SecondaryPart = ({ points, user, time_ago, comments_count }) => {
@@ -8,7 +10,9 @@ const SecondaryPart = ({ points, user, time_ago, comments_count }) => {
         {points} points by {user}
       </div>
       <div className="sec-item mid-item">{time_ago}</div>
-      <div className="sec-item">{comments_count} comments</div>
+      <Link to="/item:id" className="sec-item">
+        {comments_count} comments
+      </Link>
     </div>
   );
 };

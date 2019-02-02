@@ -18,7 +18,17 @@ const newItemsReducer = (state = [], action) => {
   }
 };
 
+const currentCommentListReducer = (state = [], action) => {
+  switch (action.type) {
+    case "SHOW_COMMENTS":
+      return [...state, ...action.payload];
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
   defaultItems: defaultItemsReducer,
-  newItems: newItemsReducer
+  newItems: newItemsReducer,
+  currentCommentList: currentCommentListReducer
 });
