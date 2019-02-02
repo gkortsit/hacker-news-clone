@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 const defaultItemsReducer = (state = [], action) => {
   switch (action.type) {
     case "FETCH_DEFAULT":
-      return [...state, action.payload];
+      return [...state, ...action.payload];
     default:
       return state;
   }
