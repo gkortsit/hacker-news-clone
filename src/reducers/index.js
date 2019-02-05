@@ -27,8 +27,18 @@ const currentCommentListReducer = (state = [], action) => {
   }
 };
 
+const getCommentIdReducer = (currentID = null, action) => {
+  switch (action.type) {
+    case "CURRENT_ID":
+      return action.payload;
+    default:
+      return currentID;
+  }
+};
+
 export default combineReducers({
   defaultItems: defaultItemsReducer,
   newItems: newItemsReducer,
-  currentCommentList: currentCommentListReducer
+  currentCommentList: currentCommentListReducer,
+  currentID: getCommentIdReducer
 });

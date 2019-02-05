@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -13,9 +13,11 @@ class App extends React.Component {
         <Router>
           <div>
             <Header />
-            <Route path="/" exact component={Main} />
-            <Route path="/new" exact component={New} />
-            <Route path="/item:id" exact component={ItemComments} />
+            <Switch>
+              <Route path="/" exact component={Main} />
+              <Route path="/new" exact component={New} />
+              <Route path="/:id" component={ItemComments} />
+            </Switch>
           </div>
         </Router>
       </React.Fragment>

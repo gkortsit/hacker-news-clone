@@ -7,8 +7,7 @@ import "./Main.css";
 
 class ItemComments extends React.Component {
   componentDidMount() {
-    // this.props.showCommentList();
-    console.log(this.props);
+    this.props.showCommentList(this.props.currentID);
   }
 
   render() {
@@ -24,7 +23,8 @@ class ItemComments extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    currentCommentList: state.currentCommentList
+    currentCommentList: state.currentCommentList,
+    currentID: state.currentID
   };
 };
 

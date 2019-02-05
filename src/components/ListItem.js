@@ -5,7 +5,7 @@ import "./ListItem.css";
 
 const ListItem = ({ data }) => {
   const { title, domain } = data;
-  const { points, user, time_ago, comments_count } = data;
+  const { points, user, time_ago, comments_count, id } = data;
   return (
     <div className="item-container">
       <div className="item-body">
@@ -20,6 +20,7 @@ const ListItem = ({ data }) => {
             points={points}
             user={user}
             time_ago={time_ago}
+            id={id}
           />
         </div>
       </div>

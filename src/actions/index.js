@@ -10,8 +10,15 @@ export const fetchNewItems = () => async dispatch => {
   dispatch({ type: "FETCH_NEW", payload: response.data });
 };
 
-export const showCommentList = async (id, dispatch) => {
+export const showCommentList = id => async dispatch => {
   const response = await axios.get(`https://api.hnpwa.com/v0/item/${id}.json`);
-  console.log(response);
-  dispatch({ type: "SHOW_COMMENTS", payload: response.comments });
+  console.log(response.data.comments);
+  dispatch({ type: "SHOW_COMMENTS", payload: response.data.comments });
+};
+
+export const getCommentId = id => {
+  return {
+    type: "CURRENT_ID",
+    payload: id
+  };
 };
