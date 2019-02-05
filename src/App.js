@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import New from "./components/New";
-import ItemComments from "./components/ItemComments";
+import ItemComments from "./components/CommentComponents/ItemComments";
 
 class App extends React.Component {
   render() {

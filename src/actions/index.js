@@ -12,7 +12,6 @@ export const fetchNewItems = () => async dispatch => {
 
 export const showCommentList = id => async dispatch => {
   const response = await axios.get(`https://api.hnpwa.com/v0/item/${id}.json`);
-  console.log(response.data.comments);
   dispatch({ type: "SHOW_COMMENTS", payload: response.data.comments });
 };
 
